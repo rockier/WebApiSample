@@ -1,10 +1,5 @@
 ﻿using Sample.Entities.Data.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sample.DataModel.ModelConfiguration
 {
@@ -12,7 +7,7 @@ namespace Sample.DataModel.ModelConfiguration
     {
         public CustomerConfiguration()
         {
-            Property(x => x.FristName)
+            Property(x => x.FirstName)
                 .HasMaxLength(20)
                 .IsRequired();
 

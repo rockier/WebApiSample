@@ -86,6 +86,10 @@
     <Compile Include="Migrations.MssqlDB\201608120307136_InitialCreate.Designer.cs">
       <DependentUpon>201608120307136_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.cs" />
+    <Compile Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.Designer.cs">
+      <DependentUpon>201608150408012_ChangeFirstNameField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations.MssqlDB\Configuration.cs" />
     <Compile Include="ModelConfiguration\CustomerConfiguration.cs" />
     <Compile Include="MssqlDataContext.cs" />
@@ -102,15 +106,18 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sample.Entities\Sample.Entities.csproj">
-      <Project>{45cbbed6-5aaa-48ba-9fb0-aea18eab0e94}</Project>
-      <Name>Sample.Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations.MssqlDB\201608120307136_InitialCreate.resx">
       <DependentUpon>201608120307136_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.resx">
+      <DependentUpon>201608150408012_ChangeFirstNameField.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Entities\Sample.Entities.csproj">
+      <Project>{A5E09401-A835-4F45-8FB7-547D45FE44B3}</Project>
+      <Name>Sample.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
